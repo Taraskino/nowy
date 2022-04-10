@@ -1,15 +1,18 @@
 spring:
   datasource:
-    username: wreczyck
-    password: <password>
-    url: jdbc:sqlserver://morfeusz.wszib.edu.pl:1433;databaseName=wreczyck
+    username: muzychka
+    password: Taras2021
+    url: jdbc:sqlserver://morfeusz.wszib.edu.pl:1433;databaseName=muzychka
   sql:
     init:
       mode: always
   flyway:
-    user: wreczyck
-    password: <password>
-    url: jdbc:sqlserver://morfeusz.wszib.edu.pl:1433;databaseName=wreczyck
-    locations: classpath:db/migrations
-    schemas: [wreczyck]
+#    user: muzychka
+#    password: Taras2021
+#    url: jdbc:sqlserver://morfeusz.wszib.edu.pl:1433;databaseName=muzychka
+#    locations: classpath:db/migrations
+#    schemas: [muzychka]
     enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: create-drop

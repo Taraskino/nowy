@@ -1,21 +1,34 @@
 package pl.edu.wszib.springjpa.model;
 
-import java.time.Instant;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.time.Instant;
+@Entity
+@Table
 public class Praca {
-  private long id;
+  @Id
+  @GeneratedValue
+  private Long id;
+
   private String nazwaFirmy;
   private String pracaOd;
   private String pracaDo;
   private String stanowisko;
+  @CreationTimestamp
   private Instant createdAt;
+  @UpdateTimestamp
   private Instant updatedAt;
 
-  public long getId() {
+  public Long getId() {
     return id;
   }
 
-  public void setId(long id) {
+  public void setId(Long id) {
     this.id = id;
   }
 
